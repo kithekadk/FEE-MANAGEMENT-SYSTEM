@@ -1,0 +1,22 @@
+.adminpage{
+    height:100vh;
+    display:flex;
+    align-items: center;
+}
+.dashboard{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width:20vw
+}
+
+.dashboard a{
+    text-decoration: none;
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}

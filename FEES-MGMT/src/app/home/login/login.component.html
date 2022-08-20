@@ -1,0 +1,15 @@
+<div>
+    <form #loginForm="ngForm" action="" [ngStyle]="{
+        'display':'flex',
+        'flex-direction':'column',
+        'justify-content':'left',
+        'align-items':'center'}" (ngSubmit)="onLogin(loginForm.value)">
+
+        <label for="email">Input email</label>
+        <input type="email" name="email" ngModel/>
+        <label for="password">Input Password</label>
+        <input type="password" name="password" ngModel>
+        <br>
+        <input type="submit" value="login"/>
+    </form>
+</div>

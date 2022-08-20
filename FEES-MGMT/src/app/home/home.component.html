@@ -1,0 +1,29 @@
+<div [style.display]="'flex'" [ngStyle]="{'justify-content':'space-between',
+  'background-color':'grey',
+  'padding-right':'20px'}">
+
+  <label for=""></label>
+  <h2>Welcome To The Jitu School</h2>
+  <h5><a (click)="toLogin()" [ngStyle]="{'text-decoration':'none', 'cursor':'pointer'}">Login</a></h5> 
+
+</div>
+
+<div [ngStyle]="{'display':'flex', 'justify-content':'space-between'}">
+    <div>
+        <img src="https://media.gettyimages.com/photos/close-up-of-hand-business-woman-thinking-account-using-calculator-picture-id1316747437?k=20&m=1316747437&s=612x612&w=0&h=MM2mjEAB7K2tqr81NF9-47n3dM49-WrFrM5NT0VKFUk=" alt="">
+       
+    </div>
+    <div *ngIf="viewform" [ngStyle]="{'padding':'40px', 'text-align':'left',
+     'background-color':'grey', 'gap':'20px'}">
+            <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="view">
+        
+        
+        <h1  [ngStyle]="{'padding':'80px', 'text-align':'center'}">THE JITU FEES MANAGEMENT SYSTEM <br>
+            <p><i>
+            Every one of your paid coins is well captured...
+            </i></p></h1>
+        
+    </div>
+</div>
