@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+// import { StudentservicesService } from '../studentservices.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  styleUrls: ['./admin.component.css'],
+  // providers: [StudentservicesService]
 })
 export class AdminComponent implements OnInit {
 
@@ -14,6 +16,10 @@ export class AdminComponent implements OnInit {
   }
   addStudent(){
     this.router.navigate(['addstudent'], {relativeTo: this.route});
+  }
+  allStudents(){
+    this.router.navigate(['allstudents'], {relativeTo: this.route});
+    
   }
 
 }

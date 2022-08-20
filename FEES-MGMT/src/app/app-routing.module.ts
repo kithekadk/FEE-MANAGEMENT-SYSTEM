@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddStudentComponent } from './admin/add-student/add-student.component';
 import { AdminComponent } from './admin/admin.component';
+import { AllStudentsComponent } from './admin/all-students/all-students.component';
 // import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
     {path:'login', component:LoginComponent}]},
   {path:'admin', component:AdminComponent, 
 children:[
-  {path:'addstudent', component:AddStudentComponent}
+  {path:'addstudent', component:AddStudentComponent},
+  {path:'allstudents', component:AllStudentsComponent}
 ]}
 ];
 
@@ -25,5 +27,5 @@ children:[
 export class AppRoutingModule { }
 
 export const routingComponents=[
-  HomeComponent, LoginComponent, AddStudentComponent
+  HomeComponent, LoginComponent, AddStudentComponent, AllStudentsComponent
 ]
