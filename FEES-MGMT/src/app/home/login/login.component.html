@@ -1,15 +1,15 @@
 <div>
-    <form #loginForm="ngForm" action="" [ngStyle]="{
+    <div #login action="" [ngStyle]="{
         'display':'flex',
         'flex-direction':'column',
         'justify-content':'left',
-        'align-items':'center'}" (ngSubmit)="onLogin(loginForm.value)">
+        'align-items':'center'}">
 
         <label for="email">Input email</label>
-        <input type="email" name="email" ngModel/>
+        <input type="email" name="email" [(ngModel)]= "staticInput.email"/>
         <label for="password">Input Password</label>
-        <input type="password" name="password" ngModel>
+        <input type="password" name="password" [(ngModel)] ="staticInput.password">
         <br>
-        <input type="submit" value="login"/>
-    </form>
+        <input type="submit" value="login" (click)="Login()">
+    </div>
 </div>

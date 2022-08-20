@@ -16,23 +16,21 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router) { }
 
 
-
-input:data={
-  email:"kakinyidk@gmail.com",
-  password:"12345678"
-}
-onLogin(input:data){
-console.warn(input);
-// console.warn(input == this.input);
-this.toAdminDashboard()
+staticInput:data={
+  email:"",
+  password:""
 }
 
-toAdminDashboard(){
-  this.router.navigate(['admin'])
+Login(){
+  if(this.staticInput.email == "kakinyidk@gmail.com" && this.staticInput.password == "12345678"){
+      this.router.navigate(['admin'])
+  }
+  console.log(this.staticInput.email == "kakinyidk@gmail.com" && this.staticInput.password=="12345678");
+  
 }
+
 
   ngOnInit(): void {
-    console.warn(this.input);
     
   }
 
