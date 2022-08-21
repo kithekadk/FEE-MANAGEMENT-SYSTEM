@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 interface data{
   email:string
   password:string
 }
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,22 +15,22 @@ interface data{
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private auth:AuthService) { }
 
-
-staticInput:data={
-  email:"",
-  password:""
-}
-
-Login(){
-  if(this.staticInput.email == "kakinyidk@gmail.com" && this.staticInput.password == "12345678"){
-      this.router.navigate(['admin'])
+  staticInput:data ={
+    email:"",
+    password:""
   }
-  console.log(this.staticInput.email == "kakinyidk@gmail.com" && this.staticInput.password=="12345678");
-  
-}
-
+  yes = (this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password)
+  Login(){
+    
+      if (this.yes){
+      this.router.navigate(['admin'])
+      }
+      console.log(this.staticInput.email == "kakinyidk@gmail.com" && this.staticInput.password=="12345678");
+      // this.router.navigate(['/'])
+      
+  }
 
   ngOnInit(): void {
     

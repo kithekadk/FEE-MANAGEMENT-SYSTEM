@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { routingComponents } from './app-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
-import { StudentservicesService } from './studentservices.service';
+import { StudentservicesService } from './services/studentservices.service';
 
 @NgModule({
   declarations: [

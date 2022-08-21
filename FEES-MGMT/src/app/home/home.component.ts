@@ -10,8 +10,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private router:Router , private route:ActivatedRoute) { }
 
-  
-
 
   view:boolean=true;
   viewform:boolean= false
