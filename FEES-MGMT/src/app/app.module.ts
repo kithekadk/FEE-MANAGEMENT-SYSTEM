@@ -7,12 +7,14 @@ import { routingComponents } from './app-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
 import { StudentservicesService } from './services/studentservices.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     AdminComponent,
+    NavbarComponent,
 
   ],
   imports: [
