@@ -5,7 +5,7 @@
         </div>
         <div class="formInputs">
             LOGIN HERE <br><br>
-    
+            <p *ngIf=validate>Invalid credentials...</p>
             <label for="email">Input Email</label>
             <input type="email" name="email" [(ngModel)]= "staticInput.email"/>
             <label for="password">Input Password</label>

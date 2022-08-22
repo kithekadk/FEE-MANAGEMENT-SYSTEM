@@ -1,8 +1,16 @@
-/* .viewstudentdiv{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 20vw;
-    gap:20px;
-} */
+tr th{
+    width: 17vw;
+    height:30px
+}
+tr:nth-child(even) {
+    background-color: gray;
+  }
+  table{
+    margin-top: 30px;
+    margin-left:20px;
+    
+  }
+  td{
+    padding:5px;
+    border: gray solid;
+  }

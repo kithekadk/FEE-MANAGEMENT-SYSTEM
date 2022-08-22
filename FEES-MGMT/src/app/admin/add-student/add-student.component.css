@@ -1,5 +1,26 @@
-
+.addstudentdiv{
+    margin-left: 70px;
+    width: 50vw;
+    margin-top: 70px;
+    
+}
 .addstudentform{
     display: flex;
     flex-direction: column;
+    background-color: gray;
+    padding:20px;
+    line-height: 30px;
+    border-radius: 20px;
+    color:white;
+    font-size: 18px;
+}
+.addstudentform input{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.addstudentform input[type="submit"]{
+    background-color: green;
+    color: white;
+    box-shadow: 2px 2px;
 }

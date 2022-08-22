@@ -1,12 +1,30 @@
-<div *ngIf="studentWObalance.length; else text2">
-    <div *ngFor="let student of studentWObalance">
-        <p>Name    :{{ student.name }}</p>
-        <p>Gender  :{{ student.gender }}</p>
-        <p>Class   :{{ student.class}}</p>
-        <p>Balance :{{ student.balance}}</p>
-    </div>
-</div>
 
-<ng-template #text2>
-    No student with 0 balance currently
-</ng-template>
+<div *ngIf="studentWObalance.length else text2">
+
+    <table>
+        <thead >
+            <tr><th colspan="4">STUDENTS WITH NO OUTSTANDING BALANCE</th></tr>
+            <tr>
+                <th>Student Name</th>
+                <th>Gender</th>
+                <th>Class</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody class="viewstudentdiv" *ngFor="let student of studentWObalance">        
+                
+                    <tr>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.gender }}</td>
+                        <td>{{ student.class}}</td>
+                        <td>{{ student.balance}}</td>
+                    </tr>
+        </tbody>
+        
+        </table>
+        
+    </div>
+    
+    <ng-template #text2>
+        No student with 0 balance currently
+    </ng-template>

@@ -18,7 +18,6 @@ export class AllStudentsComponent implements OnInit {
   
   ngOnInit(): void {
     this.studentDetails = this.Studentservices.getAllStudents()
-
   } 
 
     

@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     password:""
   }
   
+  validate = false
   
   Login(){
       console.log(this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password);
@@ -29,10 +30,15 @@ export class LoginComponent implements OnInit {
       if (this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password){
          console.log('yes');
 
-         this.router.navigate(['admin'])
+         this.router.navigate(['admin/allstudents'])
           localStorage.setItem('email', this.staticInput.email)
           localStorage.setItem('password', this.staticInput.password)
-      }else{        
+      }else{
+        this.validate = true
+        setTimeout(() => {
+          this.validate= false
+        }, 3000);    
+            
       // this.router.navigate(['admin'])
       // this.router.navigate(['login'])
       }
