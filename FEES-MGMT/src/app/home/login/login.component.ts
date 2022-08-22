@@ -21,15 +21,21 @@ export class LoginComponent implements OnInit {
     email:"",
     password:""
   }
-  yes = (this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password)
+  
+  
   Login(){
-    
-      if (this.yes){
-      this.router.navigate(['admin'])
-      }
-      console.log(this.staticInput.email == "kakinyidk@gmail.com" && this.staticInput.password=="12345678");
-      // this.router.navigate(['/'])
+      console.log(this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password);
       
+      if (this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password){
+         console.log('yes');
+
+         this.router.navigate(['admin'])
+          localStorage.setItem('email', this.staticInput.email)
+          localStorage.setItem('password', this.staticInput.password)
+      }else{        
+      // this.router.navigate(['admin'])
+      // this.router.navigate(['login'])
+      }
   }
 
   ngOnInit(): void {

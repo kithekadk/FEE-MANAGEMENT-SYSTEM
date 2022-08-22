@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginComponent } from '../home/login/login.component';
 
 
 interface data{
@@ -13,7 +12,7 @@ interface data{
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   isLoggedin:boolean=false;
   
@@ -25,9 +24,14 @@ export class AuthService {
   Login(){
     return this.Input
   }
+
   authenticated(){
-    this.isLoggedin=true;
+    if (localStorage.getItem('email') == this.Login().email && localStorage.getItem('password') == this.Login().password){
+      this.isLoggedin = true;
+    }
+
     return this.authenticated
   }
+  
 
 }

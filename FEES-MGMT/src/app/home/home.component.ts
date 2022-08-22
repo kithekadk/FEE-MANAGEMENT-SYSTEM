@@ -19,6 +19,9 @@ export class HomeComponent implements OnInit {
     this.view= false
     this.viewform= true
   }
+  toLogout(){
+    this.router.navigate(['home'], {relativeTo: this.route});
+  }
   
   ngOnInit(): void {
   }

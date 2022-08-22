@@ -7,12 +7,14 @@ import { AllStudentsComponent } from './admin/all-students/all-students.componen
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './home/login/login.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch: 'full'},
   {path:'home', component:HomeComponent, 
   children: [
-    {path:'login', component:LoginComponent}]},
+    {path:'login', component:LoginComponent},
+  {path:'logout', canActivate: [AuthGuardService],component:HomeComponent}]},
   {path:'admin', component:AdminComponent, 
 children:[
   {path:'addstudent', component:AddStudentComponent},
