@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentservicesService } from 'src/app/services/studentservices.service';
+import { studentData } from '../all-students/interfaces/interface';
 
 @Component({
   selector: 'app-withbalance',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./withbalance.component.css']
 })
 export class WithbalanceComponent implements OnInit {
+  studentwithBal!: studentData[]
 
-  constructor() { }
+  constructor( private studentService:StudentservicesService) { }
 
   ngOnInit(): void {
+    this.studentwithBal=this.studentService.getWithBalance()
   }
 
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WithbalanceComponent } from './withbalance.component';
+import { WithoutbalanceComponent } from './withoutbalance.component';
 
-describe('WithbalanceComponent', () => {
-  let component: WithbalanceComponent;
-  let fixture: ComponentFixture<WithbalanceComponent>;
+describe('WithoutbalanceComponent', () => {
+  let component: WithoutbalanceComponent;
+  let fixture: ComponentFixture<WithoutbalanceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WithbalanceComponent ]
+      declarations: [ WithoutbalanceComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WithbalanceComponent);
+    fixture = TestBed.createComponent(WithoutbalanceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

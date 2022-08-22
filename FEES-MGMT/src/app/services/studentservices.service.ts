@@ -15,21 +15,31 @@ export class StudentservicesService {
       name:'dan',
       class : 'form1',
       gender : 'male',
-      balance: 1000
+      balance: 0
     },
     {
       name:'dan2',
       class : 'form1',
       gender : 'male',
-      balance: 1000
+      balance: 0
     }
   ]
   getAllStudents() {
     return this.studentDetails
   }
 
-  getOnestudent(index:number){
-    return this.studentDetails[index]
+  getWithBalance(){
+    const bal = this.studentDetails.filter((el)=>{
+      return el.balance !== 0
+    })
+    return bal
+  }
+
+  getWithoutBalance(){
+    const bal1 = this.studentDetails.filter((el)=>{
+      return el.balance == 0
+    })
+    return bal1
   }
 
   updateStudent(index:number, updatedStudent:studentData){

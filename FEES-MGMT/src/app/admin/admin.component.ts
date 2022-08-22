@@ -19,5 +19,11 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['allstudents'], {relativeTo: this.route});
     
   }
+  withBalances(){
+    this.router.navigate(['withbalance'], {relativeTo: this.route});
+  }
+  WOBalances(){
+    this.router.navigate(['WObalance'], {relativeTo: this.route});
+  }
 
 }

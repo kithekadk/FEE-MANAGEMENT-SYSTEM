@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { StudentservicesService } from './services/studentservices.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WithbalanceComponent } from './admin/withbalance/withbalance.component';
+import { WithoutbalanceComponent } from './admin/withoutbalance/withoutbalance.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { WithbalanceComponent } from './admin/withbalance/withbalance.component'
     AdminComponent,
     NavbarComponent,
     WithbalanceComponent,
+    WithoutbalanceComponent,
 
   ],
   imports: [

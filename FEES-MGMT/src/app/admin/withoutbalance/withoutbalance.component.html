@@ -1,5 +1,5 @@
-<div *ngIf="studentwithBal.length else text1">
-    <div *ngFor="let student of studentwithBal">
+<div *ngIf="studentWObalance.length; else text2">
+    <div *ngFor="let student of studentWObalance">
         <p>Name    :{{ student.name }}</p>
         <p>Gender  :{{ student.gender }}</p>
         <p>Class   :{{ student.class}}</p>
@@ -7,6 +7,6 @@
     </div>
 </div>
 
-
-
-<ng-template #text1>No student with Outstanding balance currently...</ng-template>
+<ng-template #text2>
+    No student with 0 balance currently
+</ng-template>
