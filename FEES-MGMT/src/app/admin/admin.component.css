@@ -1,10 +1,9 @@
 .adminpage{
-    height:100vh;
+    height:80vh;
     display:flex;
     align-items: center;
 }
 .dashboard{
-    height:100vh;
     display: flex;
     flex-direction: column;
     text-align: center;

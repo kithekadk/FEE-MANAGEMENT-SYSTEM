@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentservicesService } from 'src/app/services/studentservices.service';
 import { studentData } from '../all-students/interfaces/interface';
 
@@ -15,13 +16,16 @@ export class AddStudentComponent implements OnInit {
     gender:'',
     balance:0
   }
-  constructor(private StudentservicesService:StudentservicesService) { }
+  constructor(private StudentservicesService:StudentservicesService,
+    private router:Router) { }
 
   ngOnInit(): void {
   }
 
   addNewStudent(){
     this.StudentservicesService.addStudent(this.student)
+
+    this.router.navigate(['admin/allstudents'])
   }
   
 }
