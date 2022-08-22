@@ -26,11 +26,7 @@ export class AuthService {
   }
 
   authenticated(){
-    if (localStorage.getItem('email') == this.Login().email && localStorage.getItem('password') == this.Login().password){
-      this.isLoggedin = true;
-    }
-
-    return this.authenticated
+    return localStorage.getItem('email') == this.Login().email && localStorage.getItem('password') == this.Login().password
   }
   
 

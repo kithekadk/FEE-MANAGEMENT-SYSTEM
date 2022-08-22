@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['login'], {relativeTo: this.route});
   }
   toLogout(){
+    localStorage.clear()
     this.router.navigate(['home'], {relativeTo: this.route});
   }
 

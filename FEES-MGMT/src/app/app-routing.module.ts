@@ -14,8 +14,8 @@ const routes: Routes = [
   children:[
     {path:'login', component: LoginComponent},
     {path:'home', component:HomeComponent},
-    {path:'logout', canActivate: [AuthGuardService],component:HomeComponent},
-    {path:'admin', component:AdminComponent, 
+    {path:'logout' ,component:HomeComponent},
+    {path:'admin', canActivate: [AuthGuardService], component:AdminComponent, 
 children:[
   {path:'addstudent', component:AddStudentComponent},
   {path:'allstudents', component:AllStudentsComponent}

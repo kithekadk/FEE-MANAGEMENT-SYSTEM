@@ -1,0 +1,33 @@
+.mainformdiv{
+    display: flex;
+    
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.formName{
+    background-color: lightgray;
+    border-radius: 10px 0px 0px 10px;
+    padding: 20px;
+}
+.formInputs{
+    border: 3px solid lightgray;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.mainformdiv div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 30px;
+}
+
+.mainformdiv div input{
+    padding:5px
+}
