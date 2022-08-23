@@ -2,7 +2,7 @@
     height:80vh;
     display:flex;
     /* align-items: center; */
-    background-color:lightgray;
+    background-color:lightblue;
 }
 .dashboard{
     display: flex;
@@ -16,7 +16,7 @@
 
 .dashboard a{
     text-decoration: none;
-    background-color: gray;
+    background-color: blueviolet;
     padding: 10px;
     color: white;
     border-radius: 5px;

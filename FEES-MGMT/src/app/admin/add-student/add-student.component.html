@@ -1,7 +1,8 @@
 <div class="addstudentdiv" >
     <div  class="addstudentform" >
+        <p *ngIf=filled [ngStyle]="{'color':'red'}">All fields are required</p>
         <label for="">Input student Full name</label>
-        <input type="text"  [(ngModel)]="student.name">
+        <input type="text"  [(ngModel)]="student.name" required>
 
         <label for="">Select class</label>
         <select [(ngModel)]="student.class">
@@ -11,10 +12,10 @@
             <option value="year4"> Year 4</option>
         </select>
         <label for="gender">Select gender</label>
-        <div><input type="radio" value="male" [(ngModel)]="student.gender">male</div>
-        <div><input type="radio" value="female" [(ngModel)]="student.gender">female</div>
+        <div><input type="radio" value="male" [(ngModel)]="student.gender" required>male</div>
+        <div><input type="radio" value="female" [(ngModel)]="student.gender" required>female</div>
         <label for="fees">Current balance</label>
-        <input type="number" [(ngModel)]="student.balance"><br>
+        <input type="number" [(ngModel)]="student.balance" required min="0"><br>
         <button (click)="addNewStudent()">{{updating? "UPDATE": "CREATE NEW"}}</button>
     </div>
 </div>

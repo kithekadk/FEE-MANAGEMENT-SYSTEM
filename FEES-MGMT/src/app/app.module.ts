@@ -12,6 +12,9 @@ import { WithbalanceComponent } from './admin/withbalance/withbalance.component'
 import { WithoutbalanceComponent } from './admin/withoutbalance/withoutbalance.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { ShortenPipe } from './pipes/shorten.pipe';
+import { SalutationPipe } from './pipes/salutation.pipe';
+import { ContainerDirective } from './directives/container.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { SearchPipe } from './pipes/search.pipe';
     WithoutbalanceComponent,
     NotfoundComponent,
     SearchPipe,
+    ShortenPipe,
+    SalutationPipe,
+    ContainerDirective,
     
 
   ],

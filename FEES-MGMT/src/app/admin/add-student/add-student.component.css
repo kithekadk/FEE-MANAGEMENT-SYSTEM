@@ -7,7 +7,7 @@
 .addstudentform{
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color:blueviolet;
     padding:20px;
     line-height: 30px;
     border-radius: 20px;

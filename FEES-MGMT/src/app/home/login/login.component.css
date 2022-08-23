@@ -1,18 +1,20 @@
 .mainformdiv{
     display: flex;
-    
+    background-color:lightblue;
     padding: 10px;
     justify-content: center;
+    height: 80vh;
 
 }
 
 .formName{
-    background-color: lightgray;
+    background-color:blueviolet;
     border-radius: 10px 0px 0px 10px;
     padding: 20px;
+    
 }
 .formInputs{
-    border: 3px solid lightgray;
+    border: 3px solid blueviolet;
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -26,6 +28,9 @@
     font-weight: bold;
     text-align: left;
     line-height: 30px;
+    height: 40vh;
+    /* color:white; */
+   
 }
 
 .mainformdiv div input{

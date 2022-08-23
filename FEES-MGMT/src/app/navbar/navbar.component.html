@@ -1,17 +1,11 @@
-<div [style.display]="'flex'" [ngStyle]="{'justify-content':'space-between',
-  'background-color':'grey',
-  'padding-right':'20px'}">
+<div appContainer [backgroundColor]="'blueviolet'" [color]="'yellow'"  >
 
-  <h2 *ngIf="auth.authenticated()" [ngStyle]="{'color':'red', 'padding-left':'20px'}">
-  TheJituSchool
-  </h2>
-  <h2 [ngStyle]="{'color':'white','padding-left':'20px'}">Welcome To The Jitu School</h2>
-  <h4 *ngIf="auth.authenticated()"><a (click)="toLogout()" 
-    [ngStyle]="{'text-decoration':'none', 'cursor':'pointer', 'color':'red',
-    'padding':'8px','background-color':'lightgrey'}">Logout</a>{{today | date}}</h4> 
-  <h4 *ngIf="!auth.authenticated()"><a (click)="toLogin()" 
-    [ngStyle]="{'text-decoration':'none', 'cursor':'pointer', 'color':'green',
-    'background-color':'lightgrey', 'padding':'8px'}">Login</a></h4> 
+  <h2 *ngIf="auth.authenticated()" appContainer [color]="'yellow'"> TheJituSchool </h2>
+  <h2 appContainer [color]="'white'">Welcome To The Jitu School</h2>
+  <h4 *ngIf="auth.authenticated()"><a (click)="toLogout()" appContainer
+    [color]="'red'" [padding]="'10px'" [backgroundColor]="'lightblue'" [cursor]="'pointer'">Logout</a></h4> 
+  <h4 *ngIf="!auth.authenticated()"><a (click)="toLogin()" appContainer 
+    [color]="'green'" [padding]="'10px'" [backgroundColor]="'lightblue'" [cursor]="'pointer'">Login</a></h4> 
 
 </div>
 <router-outlet></router-outlet>

@@ -9,7 +9,7 @@ export class StudentservicesService {
 
   constructor() { }
   update = new EventEmitter<number>()
-  studentDetails: studentData[]=[
+  private studentDetails: studentData[]=[
 
     {
       name:'dan',
@@ -34,14 +34,14 @@ export class StudentservicesService {
 
   getWithBalance(){
     const bal = this.studentDetails.filter((el)=>{
-      return el.balance !== 0
+      return el.balance > 0
     })
     return bal
   }
 
   getWithoutBalance(){
     const bal1 = this.studentDetails.filter((el)=>{
-      return el.balance == 0
+      return el.balance <= 0
     })
     return bal1
   }

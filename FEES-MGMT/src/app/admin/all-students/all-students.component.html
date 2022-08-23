@@ -1,6 +1,7 @@
 <div class="search">
     <input type="text" [(ngModel)]="filter" placeholder="Search Student">
 </div>
+<div *ngIf="studentDetails.length else text3">
 <table border>
 <thead >
     
@@ -17,8 +18,8 @@
 <tbody class="viewstudentdiv" *ngFor="let student of studentDetails | search:filter; let i = index ">        
             
             <tr>
-                <td>{{ student.name | titlecase}}</td>
-                <td>{{ student.gender | titlecase}}</td>
+                <td>{{ student.name | titlecase | salutation: student.gender }}</td>
+                <td>{{ student.gender | shorten | uppercase}}</td>
                 <td>{{ student.class | titlecase}}</td>
                 <td>{{ student.balance | currency: 'Ksh:': 'symbol':'1.2-2'}}</td>
                 <td>
@@ -26,12 +27,16 @@
                     'background-color':'red', 'color':'white','border':'none','padding':'4px'}" 
                     (click)="deleteStudent(i)">Delete
                     </button>
-                    <button [ngStyle]="{
+                    <!-- <button [ngStyle]="{
                     'background-color':'green', 'color':'white','border':'none','padding':'4px', 'margin-left':'55px'}" 
                     (click)="updateStudent(i)">Update
-                    </button>
+                    </button> -->
                 </td>
             </tr>
 </tbody>
 
 </table>
+</div>
+<div class="comment">
+    <ng-template #text3>No student currently...</ng-template>
+</div>

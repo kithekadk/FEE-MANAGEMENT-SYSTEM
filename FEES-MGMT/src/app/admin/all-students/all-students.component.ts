@@ -23,9 +23,9 @@ export class AllStudentsComponent implements OnInit {
   deleteStudent(index:number){
     this.Studentservices.deleteStudent(index)
   }
-  updateStudent(index:number){
-    this.Studentservices.update.emit(index)
-  }
+  // updateStudent(index:number){
+  //   this.Studentservices.update.emit(index)
+  // }
 
     
  

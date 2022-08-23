@@ -20,26 +20,35 @@ export class AddStudentComponent implements OnInit {
   updating :boolean = false;
   constructor(private StudentservicesService:StudentservicesService,
     private router:Router) { 
-      this.StudentservicesService.update.subscribe(
-        (value:number)=>{
-          this.router.navigate(['admin/addstudent'])
-          this.id=value
-          this.student = this.StudentservicesService.getOneStudent(value)
-          console.log(this.student);
+      // this.StudentservicesService.update.subscribe(
+      //   (value:number)=>{
+      //     this.router.navigate(['admin/addstudent'])
+      //     this.id=value
+      //     this.student = this.StudentservicesService.getOneStudent(value)
+      //     console.log(this.student);
           
-          this.updating = true
+      //     this.updating = true
           
         }
-      )
-    }
+      // )
+    // }
 
   ngOnInit(): void {
   }
 
+  filled= false
   addNewStudent(){
-    this.StudentservicesService.addStudent(this.student)
+    if(this.student.name ==''  || this.student.gender ==''  || this.student.class =='' ){
+      this.filled=true
+      setTimeout(() => {
+        this.filled=false
+      }, 2000);
+    }else{
+      this.StudentservicesService.addStudent(this.student)
 
-    this.router.navigate(['admin/allstudents'])
+      this.router.navigate(['admin/allstudents'])
+    }
+    
   }
   
 }
