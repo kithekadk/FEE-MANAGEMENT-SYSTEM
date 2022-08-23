@@ -1,20 +1,20 @@
 <div class="addstudentdiv" >
-    <div action="" class="addstudentform" >
+    <div  class="addstudentform" >
         <label for="">Input student Full name</label>
         <input type="text"  [(ngModel)]="student.name">
 
         <label for="">Select class</label>
         <select [(ngModel)]="student.class">
-            <option value="form1"> Form 1</option>
-            <option value="form2"> Form 2</option>
-            <option value="form3"> Form 3</option>
-            <option value="form4"> Form 4</option>
+            <option value="year1"> Year 1</option>
+            <option value="year2"> Year 2</option>
+            <option value="year3"> Year 3</option>
+            <option value="year4"> Year 4</option>
         </select>
         <label for="gender">Select gender</label>
         <div><input type="radio" value="male" [(ngModel)]="student.gender">male</div>
         <div><input type="radio" value="female" [(ngModel)]="student.gender">female</div>
         <label for="fees">Current balance</label>
         <input type="number" [(ngModel)]="student.balance"><br>
-        <input type="submit" value="CREATE" (click)="addNewStudent()">
+        <button (click)="addNewStudent()">{{updating? "UPDATE": "CREATE NEW"}}</button>
     </div>
 </div>

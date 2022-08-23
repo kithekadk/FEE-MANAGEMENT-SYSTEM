@@ -8,6 +8,7 @@ import { WithoutbalanceComponent } from './admin/withoutbalance/withoutbalance.c
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './home/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ children:[
   {path:'allstudents', component:AllStudentsComponent},
   {path:'withbalance', component:WithbalanceComponent},
   {path:'WObalance', component:WithoutbalanceComponent},
-]}
+]},{path: '**', component: NotfoundComponent}
 ]}]
 
 

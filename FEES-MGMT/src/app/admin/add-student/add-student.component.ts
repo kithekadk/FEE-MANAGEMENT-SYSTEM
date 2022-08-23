@@ -16,8 +16,22 @@ export class AddStudentComponent implements OnInit {
     gender:'',
     balance:0
   }
+  id!:number
+  updating :boolean = false;
   constructor(private StudentservicesService:StudentservicesService,
-    private router:Router) { }
+    private router:Router) { 
+      this.StudentservicesService.update.subscribe(
+        (value:number)=>{
+          this.router.navigate(['admin/addstudent'])
+          this.id=value
+          this.student = this.StudentservicesService.getOneStudent(value)
+          console.log(this.student);
+          
+          this.updating = true
+          
+        }
+      )
+    }
 
   ngOnInit(): void {
   }

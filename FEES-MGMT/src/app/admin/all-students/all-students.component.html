@@ -1,19 +1,36 @@
+<div class="search">
+    <input type="text" [(ngModel)]="filter" placeholder="Search Student">
+</div>
 <table border>
 <thead >
+    
+    <tr><th colspan="5">ALL STUDENTS </th></tr>
     <tr>
         <th>Student Name</th>
         <th>Gender</th>
         <th>Class</th>
         <th>Balance</th>
+        <th>Action</th>
     </tr>
 </thead>
-<tbody class="viewstudentdiv" *ngFor="let student of studentDetails">        
-        
+
+<tbody class="viewstudentdiv" *ngFor="let student of studentDetails | search:filter; let i = index ">        
+            
             <tr>
-                <td>{{ student.name }}</td>
-                <td>{{ student.gender }}</td>
-                <td>{{ student.class}}</td>
-                <td>{{ student.balance}}</td>
+                <td>{{ student.name | titlecase}}</td>
+                <td>{{ student.gender | titlecase}}</td>
+                <td>{{ student.class | titlecase}}</td>
+                <td>{{ student.balance | currency: 'Ksh:': 'symbol':'1.2-2'}}</td>
+                <td>
+                    <button [ngStyle]="{
+                    'background-color':'red', 'color':'white','border':'none','padding':'4px'}" 
+                    (click)="deleteStudent(i)">Delete
+                    </button>
+                    <button [ngStyle]="{
+                    'background-color':'green', 'color':'white','border':'none','padding':'4px', 'margin-left':'55px'}" 
+                    (click)="updateStudent(i)">Update
+                    </button>
+                </td>
             </tr>
 </tbody>
 

@@ -14,10 +14,10 @@
         <tbody class="viewstudentdiv" *ngFor="let student of studentWObalance">        
                 
                     <tr>
-                        <td>{{ student.name }}</td>
-                        <td>{{ student.gender }}</td>
-                        <td>{{ student.class}}</td>
-                        <td>{{ student.balance}}</td>
+                        <td>{{ student.name | titlecase}}</td>
+                        <td>{{ student.gender | titlecase}}</td>
+                        <td>{{ student.class | titlecase}}</td>
+                        <td>{{ student.balance | currency: 'Ksh:': 'symbol':'1.2-2'}}</td>
                     </tr>
         </tbody>
         

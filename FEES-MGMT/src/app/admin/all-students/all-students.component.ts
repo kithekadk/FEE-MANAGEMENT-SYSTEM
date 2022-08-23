@@ -11,7 +11,7 @@ import { studentData } from './interfaces/interface';
 })
 export class AllStudentsComponent implements OnInit {
   studentDetails!: studentData[]
-
+  filter=''
   constructor(private Studentservices:StudentservicesService) {
     
    }
@@ -19,6 +19,13 @@ export class AllStudentsComponent implements OnInit {
   ngOnInit(): void {
     this.studentDetails = this.Studentservices.getAllStudents()
   } 
+   
+  deleteStudent(index:number){
+    this.Studentservices.deleteStudent(index)
+  }
+  updateStudent(index:number){
+    this.Studentservices.update.emit(index)
+  }
 
     
  

@@ -22,6 +22,6 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['home'], {relativeTo: this.route});
   }
 
-
+  today= new Date()
 
 }

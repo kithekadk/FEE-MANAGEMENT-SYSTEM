@@ -2,6 +2,7 @@
 
 <table border>
     <thead >
+        <tr><th colspan="4">STUDENTS WITH OUTSTANDING BALANCEs</th></tr>
         <tr>
             <th>Student Name</th>
             <th>Gender</th>
@@ -12,10 +13,10 @@
     <tbody class="viewstudentdiv" *ngFor="let student of studentwithBal">        
             
                 <tr>
-                    <td>{{ student.name }}</td>
-                    <td>{{ student.gender }}</td>
-                    <td>{{ student.class}}</td>
-                    <td>{{ student.balance}}</td>
+                    <td>{{ student.name | titlecase}}</td>
+                    <td>{{ student.gender | titlecase}}</td>
+                    <td>{{ student.class | titlecase}}</td>
+                    <td>{{ student.balance | currency: 'Ksh:': 'symbol':'1.2-2'}}</td>
                 </tr>
     </tbody>
     

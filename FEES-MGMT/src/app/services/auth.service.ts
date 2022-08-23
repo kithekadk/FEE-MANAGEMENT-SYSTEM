@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 
 interface data{
@@ -12,7 +11,7 @@ interface data{
 })
 export class AuthService {
 
-  constructor(private router:Router) { }
+  constructor() { }
 
   isLoggedin:boolean=false;
   

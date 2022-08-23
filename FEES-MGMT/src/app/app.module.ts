@@ -10,6 +10,8 @@ import { StudentservicesService } from './services/studentservices.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WithbalanceComponent } from './admin/withbalance/withbalance.component';
 import { WithoutbalanceComponent } from './admin/withoutbalance/withoutbalance.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,9 @@ import { WithoutbalanceComponent } from './admin/withoutbalance/withoutbalance.c
     NavbarComponent,
     WithbalanceComponent,
     WithoutbalanceComponent,
+    NotfoundComponent,
+    SearchPipe,
+    
 
   ],
   imports: [

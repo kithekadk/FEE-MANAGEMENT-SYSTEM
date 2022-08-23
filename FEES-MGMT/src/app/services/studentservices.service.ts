@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { studentData } from '../admin/all-students/interfaces/interface';
 
 
@@ -8,7 +8,7 @@ import { studentData } from '../admin/all-students/interfaces/interface';
 export class StudentservicesService {
 
   constructor() { }
-
+  update = new EventEmitter<number>()
   studentDetails: studentData[]=[
 
     {
@@ -26,6 +26,10 @@ export class StudentservicesService {
   ]
   getAllStudents() {
     return this.studentDetails
+  }
+  
+  getOneStudent(index:number){
+    return this.studentDetails[index]
   }
 
   getWithBalance(){

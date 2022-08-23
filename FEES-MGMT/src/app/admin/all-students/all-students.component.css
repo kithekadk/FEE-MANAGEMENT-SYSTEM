@@ -14,3 +14,14 @@ tr:nth-child(even) {
     padding:5px;
     border: gray solid;
   }
+
+.search{
+  display:flex;
+  justify-content: center;
+  margin-top:20px;
+}
+.search input{
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
