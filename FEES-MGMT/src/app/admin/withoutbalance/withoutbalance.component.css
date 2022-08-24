@@ -3,7 +3,7 @@ tr th{
     height:30px
 }
 tr:nth-child(even) {
-    background-color: gray;
+    background-color: blueviolet;
   }
   table{
     margin-top: 30px;
@@ -12,7 +12,7 @@ tr:nth-child(even) {
   }
   td{
     padding:5px;
-    border: gray solid;
+    border: blueviolet solid;
   }
 
 

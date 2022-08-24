@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   
   Login(){
       if (this.staticInput.email == this.auth.Login().email && this.staticInput.password == this.auth.Login().password){
-         console.log('yes');
+
 
          this.router.navigate(['admin/allstudents'])
 
